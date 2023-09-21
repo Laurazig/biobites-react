@@ -6,7 +6,7 @@ const MealsPage = () => {
     return (
         <div>
             <div>
-{data.title}
+                {data.mealName}
                 {/* <button onClick={() => addToCart(meal)}>Add To Cart</button> */}
             </div>
         </div>

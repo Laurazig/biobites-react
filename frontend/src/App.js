@@ -6,14 +6,16 @@ import CartPage from "./views/cartPage/CartPage";
 import MealsPage from "./views/mealsPage/MealsPage";
 
 function App() {
+  let data = require("./views/mealsPage/meals.json")
   return (
 <div className='App'>
         <Router>
           <Routes>
             <Route path="/meals" element={<MealsPage />} />
             <Route path="/cart" element={<CartPage />} />
-            <h1>Biobites</h1>
           </Routes>
+            <h1>Biobites</h1>
+            <h2>meal name {data.mealName}</h2>
         </Router>
       </div>
   );
