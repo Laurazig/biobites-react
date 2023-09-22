@@ -7,6 +7,9 @@ const MealsPage = () => {
         <div>
             <div>
                 {data.mealName}
+                {data.img}
+                {data.description}
+                {data.price}
                 {/* <button onClick={() => addToCart(meal)}>Add To Cart</button> */}
             </div>
         </div>
