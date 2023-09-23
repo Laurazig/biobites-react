@@ -1,0 +1,35 @@
+.mealsContainer {
+  width: 70%;
+  margin: auto;
+  background-color: rgb(2, 71, 2);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+}
+.mealCard {
+  background-color: green;
+  box-shadow: 0 0 2px;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  padding: 20px;
+  &:hover {
+    transform: scale(1.01);
+    transition: 0.6s;
+    background-color: rgb(1, 115, 1);
+  }
+  .cardTitleBox {
+    height: 3rem;
+    h2 {
+      font-size: 19px;
+    }
+  }
+  .cardImgBox {
+    height: 9rem;
+    img {
+      width: 100%;
+    }
+  }
+  .cardDescriptionBox{
+    height: 6.5rem;
+  }
+}

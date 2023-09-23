@@ -3,7 +3,7 @@
       "$oid": "630afd321fbf6ac073efa29e"
     },
     "mealName": "Dish 1",
-    "img": "http://localhost:3001/meal-1.jpg",
+    "img": "http://localhost:3000/meal-1.jpg",
     "description": "Eating these items can reduce your exposure to some pesticide residues. It may also lower your risk of exposure to antibiotic-resistant bacteria.",
     "price": 10
   },{

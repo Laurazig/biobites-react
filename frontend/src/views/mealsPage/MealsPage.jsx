@@ -1,16 +1,27 @@
+import "./mealsPage.scss";
 
-// import meals from "../../../../server/meals.json"
 const MealsPage = () => {
-    let data = require("./meals.json")
-    //map
+    let data = require("./data.json")
     return (
         <div>
-            <div>
-                {data.mealName}
-                {data.img}
-                {data.description}
-                {data.price}
-                {/* <button onClick={() => addToCart(meal)}>Add To Cart</button> */}
+            <h3 className="mealPageText">Select 3 meals and proceed to cart for checkout</h3>
+            <div className="mealsContainer">
+                {data.map((meal) => {
+                    return (
+                        <div key={meal._id} className="mealCard">
+                            <div className="cardTitleBox">
+                                <h2>{meal.mealName}</h2>
+                            </div>
+                            <div className="cardImgBox">
+                                <img src={meal.img} alt="" />
+                            </div>
+                            <div className="cardDescriptionBox">
+                                <p>{meal.description}</p>
+                            </div>
+                            <p>{meal.price}€</p>
+                        </div>
+                    )
+                })}
             </div>
         </div>
     )
