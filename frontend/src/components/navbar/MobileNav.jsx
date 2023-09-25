@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-// import MenuIcon from "@mui/icons-material/Menu";
-// import CloseIcon from "@mui/icons-material/Close";
+import "./MobileNav.scss";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function MobileNav(props) {
     const [hideSidemenu, setHideSideMenu] = useState(true);
@@ -12,36 +13,37 @@ export default function MobileNav(props) {
         setHideSideMenu((current) => !current);
     };
     return (
-        <>
-            {/* <MenuIcon
+        <div className="navBar">
+            <h1>Biobites</h1>
+            <MenuIcon
                 onClick={handleClickBurger}
                 className={hideSidemenu === false ? "hide" : "menuIcon"}
                 style={{ fontSize: 35 }}
-            /> */}
+            />
 
             {/* Green area with content */}
             <div className={hideSidemenu === true ? "hide" : "sectionWrapper"}>
-                {/* <CloseIcon
+                <CloseIcon
                     onClick={handleClickBurger}
                     className={hideSidemenu === false ? "closeIcon" : "hide"}
-                /> */}
+                />
 
                 <div className="linkWrapper">
                     <NavLink to="/" onClick={handleClickBurger}>
                         Home
                     </NavLink>
 
-                    <NavLink to="howitworks" onClick={handleClickBurger}>
+                    {/* <NavLink to="howitworks" onClick={handleClickBurger}>
                         How it works
-                    </NavLink>
+                    </NavLink> */}
 
                     <NavLink to="/meals" onClick={handleClickBurger}>
                         {" "}
                         Meals
                     </NavLink>
-                    <NavLink to="/sustainability" onClick={handleClickBurger}>
+                    {/* <NavLink to="/sustainability" onClick={handleClickBurger}>
                         Sustainability
-                    </NavLink>
+                    </NavLink> */}
 
                     <NavLink
                         className={props.isLoggedIn === false ? "hide" : "cartPage"}
@@ -52,6 +54,6 @@ export default function MobileNav(props) {
                     </NavLink>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
