@@ -4,14 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CartPage from "./views/cartPage/CartPage";
 // import HomePage from "./views/homePage/homePage";
 import MealsPage from "./views/mealsPage/MealsPage";
-import MobileNav from "./components/navbar/MobileNav";
-
+import Navigation from "./components/navbar/Navigation";
 
 function App() {
   return (
     <div className="App">
       <Router>
-      <MobileNav/>
+        <Navigation />
         <Routes>
           {/* <Route path="/" element={<HomePage />} /> */}
           <Route path="/meals" element={<MealsPage />} />

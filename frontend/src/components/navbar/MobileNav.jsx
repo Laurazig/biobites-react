@@ -17,7 +17,7 @@ export default function MobileNav(props) {
             <h1>Biobites</h1>
             <MenuIcon
                 onClick={handleClickBurger}
-                className={hideSidemenu === false ? "hide" : "menuIcon"}
+                className={hideSidemenu === false ? "menuIcon" :"hide" }
                 style={{ fontSize: 35 }}
             />
 
